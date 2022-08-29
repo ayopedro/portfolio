@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* @import url("https://fonts.googleapis.com/css2?family=Molle&display=swap"); */
+
+:root {
+  --neon: rgba(34, 197, 94, 1);
+  --bg-clr: #030d1f;
+  --white: #FFFFFF;
+  --grey: #8896AB;
+  --ff-heading: 'DM Serif Display', serif;
+  --ff-body: 'Manrope', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--bg-clr);
+  color: var(--white);
+  font-family: var(--ff-body)
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+}
+
+ul {
+  list-style-type: none;
 }

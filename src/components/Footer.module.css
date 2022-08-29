@@ -1,0 +1,17 @@
+.social {
+    width: 90%;
+    display: flex;
+    padding: 10px;
+    gap: 50px;
+  }
+  
+  .social__icon {
+    color: var(--grey);
+    font-size: 2rem;
+    transition: 0.5s;
+  }
+  
+  .social__icon:hover {
+    color: var(--neon);
+    transform: scale(0.9);
+  }

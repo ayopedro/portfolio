@@ -1,0 +1,59 @@
+.work {
+    padding: 2rem;
+}
+
+.heading {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.card {
+    margin-block: 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.btn {
+    margin-block: 20px;
+    border: 1px solid var(--white);
+    background-color: transparent;
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    align-self: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 8px var(--neon);
+    border-color: var(--neon);
+    color: var(--neon);
+    transform: scaleY(1.1);
+}
+
+@media (min-width: 768px){
+    .card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding-inline: 70px;
+    }
+
+    .heading {
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-inline: 70px;
+    }
+}
