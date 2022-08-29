@@ -10,7 +10,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* z-index: 1; */
 }
 
 .nav__links {
@@ -26,7 +25,7 @@
   cursor: pointer;
 }
 
-.nav__link:hover {
+.nav__link:active {
   color: var(--neon);
   transform: scale(0.9);
 }
@@ -78,7 +77,9 @@
 
   .nav__link:hover {
     transform: scale(1.2);
+    color: var(--neon);
   }
+
 
   .nav__link + .nav__link {
     margin-top: 0;
@@ -97,7 +98,7 @@
   }
 
   .social__icon:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
 }
 
