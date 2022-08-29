@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 
 function Work() {
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref, inView } = useInView({threshold: .1});
   const animation = useAnimation();
 
   const content = webPages.map(({ title, id, url, type }) => {
@@ -23,12 +23,12 @@ function Work() {
           type: "spring",
           duration: 2,
           bounce: 0.2,
-          delay: .8,
+          // delay: .8,
         },
       });
     }
     if (!inView) {
-      animation.start({ y: "50vh", opacity: 0 });
+      animation.start({ y: "100vh", opacity: 0 });
     }
   }, [inView, animation]);
 
@@ -40,26 +40,47 @@ function Work() {
       opacity: 1,
       transition: {
         duration: 3,
-        ease: "easeInOut"
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const buttonVariant = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 3,
+        ease: "easeInOut",
+        delay: 3,
       },
     },
   };
 
   return (
     <section ref={ref} className={styles.work}>
-    <div className={styles.title}>
-      <motion.h2
-        variants={headingVariant}
-        initial="hidden"
-        animate="visible"
-        className={styles.heading}
-      >
-        Some of my work
-      </motion.h2>
-        <Link to='/projects'>
-            <button className={styles.btn}>View More</button>
+      <div className={styles.title}>
+        <motion.h2
+          variants={headingVariant}
+          initial="hidden"
+          animate="visible"
+          className={styles.heading}
+        >
+          Some of my work
+        </motion.h2>
+        <Link to="/projects">
+          <motion.button
+            variants={buttonVariant}
+            initial="hidden"
+            animate="visible"
+            className={styles.btn}
+          >
+            View More
+          </motion.button>
         </Link>
-    </div>
+      </div>
       <motion.div animate={animation} className={styles.card}>
         {content}
       </motion.div>

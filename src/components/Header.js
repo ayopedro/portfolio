@@ -42,14 +42,14 @@ function Header() {
 
   const imageVariant = {
     hidden: {
-      x: "100vw",
+      opacity: 0,
     },
     visible: {
-      x: 0,
+      opacity: 1,
       transition: {
         delay: 1,
-        duration: 1.5,
-        ease: "anticipate",
+        duration: 2,
+        // ease: "anticipate",
       },
     },
   };

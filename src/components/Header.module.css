@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    padding-top: 100px;
 }
 
 .welcome {
@@ -25,6 +24,7 @@
 
 .skills span {
     margin-right: 5px;
+    color: var(--neon);
 }
 
 .welcome h1 {

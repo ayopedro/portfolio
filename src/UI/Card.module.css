@@ -1,7 +1,7 @@
 .card {
   border-radius: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.306);
 }
 
 .preview {
@@ -10,6 +10,7 @@
   background-color: #fff;
   background-image: url(../assets/Cover.png);
   background-size: cover;
+  background-position: center;
 }
 
 .content {
